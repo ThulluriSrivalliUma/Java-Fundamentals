@@ -7,7 +7,7 @@ import java.util.Random;
 public class EmployeeWageComputationProblem {
     public static void main(String[] args) {
         System.out.println("Employee Wage Computation Program on Master Branch");
-        Employee emp = new Employee();
+        Employee emp= new Employee();
         emp.checkAttendance();
         emp.calculateMonthlyWage();
     }
@@ -18,14 +18,14 @@ public class EmployeeWageComputationProblem {
         final int WORKING_DAYS_PER_MONTH ;
         final int MAX_HOURS ;
         public Employee() {
-            this. WAGES_PER_HOUR = 20;
-            this.FULL_DAY_HOUR = 8;
-            this. PART_DAY_HOUR = 8;
-            this. WORKING_DAYS_PER_MONTH = 20;
-            this. MAX_HOURS = 100;
+            this. WAGES_PER_HOUR= 20;
+            this.FULL_DAY_HOUR= 8;
+            this. PART_DAY_HOUR= 8;
+            this. WORKING_DAYS_PER_MONTH= 20;
+            this. MAX_HOURS= 100;
         }
-        Random rand = new Random();
-        List<Integer> dailyAttendance = new ArrayList<>();
+        Random rand= new Random();
+        List<Integer> dailyAttendance= new ArrayList<>();
         public void checkAttendance() {
             attendance= rand.nextInt(2); // generates either 0 or 1
             if (attendance==1) {
@@ -44,7 +44,7 @@ public class EmployeeWageComputationProblem {
                     hours= PART_DAY_HOUR;
                     break;
                 default:
-                    hours=0;// absent
+                    hours= 0;// absent
             }
             return hours*WAGES_PER_HOUR; //calculates daily employee wage
         }
@@ -62,17 +62,17 @@ public class EmployeeWageComputationProblem {
                     totalHours += FULL_DAY_HOUR; // updating the working hours of the full time employee
                 }
                 else if(workType==2){
-                    totalHours += PART_DAY_HOUR; // updating the working hours of the part time employee
+                    totalHours+= PART_DAY_HOUR; // updating the working hours of the part time employee
                 }
             }
             System.out.println("Employee daily work type: \n 0: Employee is absent \n 1: Employee has worked full day \n 2: Employee has worked for part time");
             System.out.println("Day\t\tWork type");
             System.out.println("-------------------");
             for(int i=0;i<dailyAttendance.size();i++) {
-                System.out.println((i + 1) + "\t\t" + dailyAttendance.get(i));
+                System.out.println((i+1) +"\t\t"+ dailyAttendance.get(i));
             }
-            System.out.println("Total Wage for the month = " + totalWage);
-            System.out.println("Total Working Days = "+totalDays+", Total Working Hours = "+totalHours);
+            System.out.println("Total Wage for the month = " +totalWage);
+            System.out.println("Total Working Days = "+totalDays+",Total Working Hours = "+totalHours);
         }
     }
 }
