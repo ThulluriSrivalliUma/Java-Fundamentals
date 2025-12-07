@@ -13,12 +13,18 @@ public class EmployeeWageComputationProblem {
     }
     public static class Employee{
         int attendance;
-        final int WAGES_PER_HOUR=20;
-        final int FULL_DAY_HOUR =8;
-        final int PART_DAY_HOUR =8;
-        final int WORKING_DAYS_PER_MONTH =20;
-        final int MAX_HOURS =100;
-        Random rand= new Random();
+        final int FULL_DAY_HOUR ,WAGES_PER_HOUR;
+        final int PART_DAY_HOUR ;
+        final int WORKING_DAYS_PER_MONTH ;
+        final int MAX_HOURS ;
+        public Employee() {
+            this. WAGES_PER_HOUR = 20;
+            this.FULL_DAY_HOUR = 8;
+            this. PART_DAY_HOUR = 8;
+            this. WORKING_DAYS_PER_MONTH = 20;
+            this. MAX_HOURS = 100;
+        }
+        Random rand = new Random();
         List<Integer> dailyAttendance = new ArrayList<>();
         public void checkAttendance() {
             attendance= rand.nextInt(2); // generates either 0 or 1
